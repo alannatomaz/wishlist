@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { PRIOS, avgPrice, brl, catOf, imgsOf, coverOf, objPos, fileToImg } from '../lib/utils';
+import { PRIOS, avgPrice, brl, catOf, imgsOf, coverOf, objPos, fileToImg, fmtDate } from '../lib/utils';
 
 export function Thumb({ item, h, cats }){
   const cat = catOf(item.cat, cats);
@@ -68,6 +68,7 @@ export function Card({ item, onOpen, drag, dragProps, dropover, selecting, selec
           <span className="rng">{brl(item.min)}–{brl(item.max)}</span>
         </div>
         <div className="cardfoot">
+          <span>{fmtDate(item.date)}</span>
           <span>{item.links.length} {item.links.length===1?"loja":"lojas"}</span>
         </div>
       </div>

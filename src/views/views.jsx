@@ -296,7 +296,7 @@ export function ListView({ items, onOpen, onAdd, sort, onReorder, sel, anyFilter
               className={"lrow"+(it.bought?" bought":"")+(manual?" draggable":"")+(overId===it.id?" dropover":"")+(sel.active?" selecting":"")+(selected?" selected":"")}
               {...props(it.id)} onClick={()=>sel.active?sel.toggle(it.id):onOpen(it)}>
               {sel.active&&<span className={"selcheck inline"+(selected?" on":"")}>{selected?"✓":""}</span>}
-              {manual&&<span className="dragh">⠿</span>}
+              {manual&&<span className="dragh" title="arraste">⠿</span>}
               <div className="lt" style={{ background:`color-mix(in srgb, ${cat.color} 15%, var(--tint))`, color:cat.color }}>
                 {cover?<img src={cover.src} alt="" style={{ objectPosition:objPos(cover) }} />:<span className="mono-ini">{cat.ini}</span>}
               </div>

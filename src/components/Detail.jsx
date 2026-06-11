@@ -50,7 +50,7 @@ export function ItemDetail({ item, store, onClose, onEdit }){
           {cover&&!adjust&&<button className="framebtn" onClick={()=>setAdjust(true)}>✥ ajustar enquadramento</button>}
           <div className="gallery-thumbs">
             {imgs.map((im,i)=>(
-              <div key={i} className={"gthumb"+(i===0?" iscover":"")} onClick={()=>{ if(i!==0){ writeImgs([imgs[i],...imgs.filter((_,j)=>j!==i)]); setAdjust(false); } }}>
+              <div key={i} className={"gthumb"+(i===0?" iscover":"")} title={i===0?"capa":"definir como capa"} onClick={()=>{ if(i!==0){ writeImgs([imgs[i],...imgs.filter((_,j)=>j!==i)]); setAdjust(false); } }}>
                 <img src={im.src} alt="" style={{ objectPosition:objPos(im) }} />
                 {i===0&&<span className="coverbadge">capa</span>}
                 <button className="gthumb-x" onClick={e=>{ e.stopPropagation(); writeImgs(imgs.filter((_,j)=>j!==i)); }}>✕</button>
@@ -73,12 +73,12 @@ export function ItemDetail({ item, store, onClose, onEdit }){
           <div className="linklist">
             {item.links.map((l,i)=>(
               <div key={i} className={"linkrow"+(l.best?" best":"")}>
-                <button className={"starbtn"+(l.best?" on":"")} onClick={()=>setBest(i)}>★</button>
+                <button className={"starbtn"+(l.best?" on":"")} title="marcar melhor opção" onClick={()=>setBest(i)}>★</button>
                 <div className="linkmain"><b>{l.s}</b>{l.best&&<span className="bestlbl">melhor opção</span>}</div>
                 <span className="linkprice">{brl(l.p)}</span>
                 {(l.url&&l.url!=="#")
                   ?<a className="gobtn" href={l.url} target="_blank" rel="noopener noreferrer">abrir ↗</a>
-                  :<span className="gobtn disabled">sem link</span>}
+                  :<span className="gobtn disabled" title="adicione o link no botão editar">sem link</span>}
               </div>
             ))}
           </div>
@@ -217,7 +217,7 @@ export function CategoryManager({ store, onClose }){
               <input className="inp" value={r.name} placeholder="Nome da categoria" onChange={e=>upd(i,{name:e.target.value})} />
               <div className="cm-swatches">
                 {palette.map(col=>(
-                  <button key={col} type="button" className={"cm-sw"+(r.color===col?" on":"")} style={{ background:col }} onClick={()=>upd(i,{color:col})}></button>
+                  <button key={col} type="button" className={"cm-sw"+(r.color===col?" on":"")} style={{ background:col }} onClick={()=>upd(i,{color:col})} title="cor"></button>
                 ))}
               </div>
             </div>

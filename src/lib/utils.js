@@ -1,4 +1,4 @@
-export const DEFAULT_CATS = {
+﻿export const DEFAULT_CATS = {
   eletro:  { name:"Eletrônicos", ini:"E", color:"var(--eletro)" },
   moda:    { name:"Moda",        ini:"M", color:"var(--moda)" },
   casa:    { name:"Casa",        ini:"C", color:"var(--casa)" },
@@ -93,3 +93,4 @@ function detectFocus(ctx, w, h){
   const fy=((cy*0.6+by*0.4)/h)*100;
   return { x:Math.round(Math.max(12,Math.min(88,fx))), y:Math.round(Math.max(12,Math.min(88,fy))) };
 }
+
