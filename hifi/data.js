@@ -23,42 +23,7 @@ window.PRIOS = {
 };
 window.PRI_ORDER = [0,1,2,3];
 
-window.SEED = [
-  { id:1, t:"Fone Bluetooth ANC", cat:"eletro", min:320, max:590, pri:1, date:"2026-06-02", bought:false,
-    notes:"Esperar a Black Friday? Quero o cancelamento de ruído bom.",
-    links:[{s:"Amazon",p:449,best:true,url:"https://www.amazon.com.br/s?k=Fone%20Bluetooth%20ANC"},{s:"Mercado Livre",p:470,best:false,url:"https://lista.mercadolivre.com.br/Fone%20Bluetooth%20ANC"},{s:"Magalu",p:510,best:false,url:"https://www.magazineluiza.com.br/busca/Fone%20Bluetooth%20ANC"}] },
-  { id:2, t:"Tênis de corrida", cat:"esporte", min:340, max:520, pri:1, date:"2026-05-30", bought:false,
-    notes:"Número 41. Conferir se tem na cor azul.",
-    links:[{s:"Netshoes",p:359,best:true,url:"https://www.netshoes.com.br/busca?nsCat=Natural&q=T%C3%AAnis%20de%20corrida"},{s:"Nike",p:399,best:false,url:"https://www.nike.com.br/busca?q=T%C3%AAnis%20de%20corrida"}] },
-  { id:3, t:"Cadeira ergonômica", cat:"casa", min:980, max:1650, pri:2, date:"2026-05-28", bought:false,
-    notes:"Pra parar de doer as costas no home office.",
-    links:[{s:"Amazon",p:1180,best:false,url:"https://www.amazon.com.br/s?k=Cadeira%20ergon%C3%B4mica"},{s:"Madeira Madeira",p:980,best:true,url:"https://www.madeiramadeira.com.br/busca?q=Cadeira%20ergon%C3%B4mica"}] },
-  { id:4, t:"Câmera instantânea", cat:"eletro", min:480, max:640, pri:3, date:"2026-05-21", bought:false,
-    notes:"", links:[{s:"Magalu",p:499,best:true,url:"https://www.magazineluiza.com.br/busca/C%C3%A2mera%20instant%C3%A2nea"}] },
-  { id:5, t:"Cafeteira italiana", cat:"casa", min:140, max:230, pri:2, date:"2026-05-18", bought:false,
-    notes:"Tamanho 6 xícaras.", links:[{s:"Amazon",p:169,best:true,url:"https://www.amazon.com.br/s?k=Cafeteira%20italiana"},{s:"Casas Bahia",p:189,best:false,url:"https://www.casasbahia.com.br/busca/Cafeteira%20italiana"}] },
-  { id:6, t:"Livro: O Hobbit (capa dura)", cat:"livros", min:45, max:95, pri:2, date:"2026-05-15", bought:false,
-    notes:"Edição capa dura se possível.", links:[{s:"Amazon",p:54,best:true,url:"https://www.amazon.com.br/s?k=Livro%3A%20O%20Hobbit"},{s:"Estante Virtual",p:45,best:false,url:"https://www.estantevirtual.com.br/busca?q=Livro%3A%20O%20Hobbit"}] },
-  { id:7, t:"Mochila urbana", cat:"moda", min:200, max:340, pri:3, date:"2026-05-12", bought:false,
-    notes:"", links:[{s:"Samsonite",p:289,best:true,url:"https://www.samsonite.com.br/busca?q=Mochila%20urbana"}] },
-  { id:8, t:"Monitor 27\" 144hz", cat:"eletro", min:920, max:1450, pri:1, date:"2026-05-09", bought:false,
-    notes:"Pra jogar e trabalhar. IPS de preferência.",
-    links:[{s:"Kabum",p:1099,best:true,url:"https://www.kabum.com.br/busca/Monitor%2027%5C"},{s:"Amazon",p:1149,best:false,url:"https://www.amazon.com.br/s?k=Monitor%2027%5C"},{s:"Pichau",p:1130,best:false,url:"https://www.pichau.com.br/search?q=Monitor%2027%5C"}] },
-  { id:9, t:"Perfume importado", cat:"beleza", min:280, max:430, pri:2, date:"2026-05-05", bought:false,
-    notes:"Provar na loja antes.", links:[{s:"Sephora",p:329,best:true,url:"https://www.sephora.com.br/busca?q=Perfume%20importado"},{s:"Época",p:355,best:false,url:"https://www.epocacosmeticos.com.br/busca?busca=Perfume%20importado"}] },
-  { id:10, t:"Luminária de mesa", cat:"casa", min:110, max:190, pri:3, date:"2026-04-28", bought:true,
-    notes:"Já comprei! 🎉", links:[{s:"Amazon",p:139,best:true,url:"https://www.amazon.com.br/s?k=Lumin%C3%A1ria%20de%20mesa"}] },
-  { id:11, t:"Caderno pontilhado", cat:"livros", min:38, max:80, pri:3, date:"2026-04-22", bought:false,
-    notes:"", links:[{s:"Amazon",p:49,best:true,url:"https://www.amazon.com.br/s?k=Caderno%20pontilhado"}] },
-  { id:12, t:"Smartwatch fitness", cat:"eletro", min:520, max:890, pri:2, date:"2026-04-20", bought:false,
-    notes:"Medir batimentos e sono.", links:[{s:"Amazon",p:649,best:true,url:"https://www.amazon.com.br/s?k=Smartwatch%20fitness"},{s:"Fast Shop",p:699,best:false,url:"https://www.fastshop.com.br/web/busca?q=Smartwatch%20fitness"}] },
-  { id:13, t:"Ração do gato (10kg)", cat:"casa", min:120, max:180, pri:0, date:"2026-06-04", bought:false,
-    notes:"Acabando! Comprar até o fim da semana.", links:[{s:"Petz",p:139,best:true,url:"https://www.petz.com.br/busca?q=ra%C3%A7%C3%A3o%20gato"},{s:"Cobasi",p:149,best:false,url:"https://www.cobasi.com.br/pesquisa?q=ra%C3%A7%C3%A3o%20gato"}] },
-  { id:14, t:"Refil do filtro de água", cat:"casa", min:45, max:75, pri:0, date:"2026-06-03", bought:false,
-    notes:"Trocar a cada 3 meses — já passou do prazo.", links:[{s:"Amazon",p:49,best:true,url:"https://www.amazon.com.br/s?k=refil%20filtro%20de%20%C3%A1gua"}] },
-  { id:15, t:"Pasta de dente (kit)", cat:"beleza", min:18, max:35, pri:0, date:"2026-06-01", bought:false,
-    notes:"", links:[{s:"Magalu",p:24,best:true,url:"https://www.magazineluiza.com.br/busca/pasta%20de%20dente"}] },
-];
+window.SEED = [];
 
 /* ---- helpers ---- */
 window.brl = (n) => "R$\u00a0" + Math.round(n).toLocaleString("pt-BR");
